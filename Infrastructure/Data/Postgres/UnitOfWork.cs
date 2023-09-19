@@ -15,6 +15,12 @@ public class UnitOfWork : IUnitOfWork
     private UserTokenRepository? _userTokenRepository;
     private CommentRepository? _commentRepository;
 
+    private AdvertRepository? _advertRepository;
+    private SkillRepository? _skillRepository;
+    private EducationRepository? _educationRepository;
+    private ExperienceRepository? _experienceRepository;
+
+
 
     public UnitOfWork(PostgresContext postgresContext)
     {
@@ -24,6 +30,10 @@ public class UnitOfWork : IUnitOfWork
     public IUserRepository Users => _userRepository ??= new UserRepository(_postgresContext);
     public IUserTokenRepository UserTokens => _userTokenRepository ??= new UserTokenRepository(_postgresContext);
     public ICommentRepository Comments => _commentRepository ??= new CommentRepository(_postgresContext);
+    public IAdvertRepository Adverts => _advertRepository ??= new AdvertRepository(_postgresContext);
+    public ISkillRepository Skilles => _skillRepository ??= new SkillRepository(_postgresContext);
+    public IEducationRepository Educations => _educationRepository ??= new EducationRepository(_postgresContext);
+    public IExperienceRepository Experiences => _experienceRepository ??= new ExperienceRepository(_postgresContext);
 
 
     public async Task<int> CommitAsync()
