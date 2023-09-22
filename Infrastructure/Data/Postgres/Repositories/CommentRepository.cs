@@ -16,7 +16,7 @@ namespace Infrastructure.Data.Postgres.Repositories
         {
         }
 
-        public async Task<IList<Comment>> GetAdvertByIdAsync(int id)
+        public async Task<IList<Comment>> GetCommentByIdAsync(int id)
         {
             return await PostgresContext.Set<Comment>()
                 .Where(Comment => Comment.Id == id)

@@ -21,6 +21,13 @@ public static class DependencyInjection
         serviceCollection.AddScoped<IAuthService, AuthService>();
         serviceCollection.AddScoped<IUserService, UserService>();
 
+        serviceCollection.AddScoped<IAdvertService, AdvertService>();
+        serviceCollection.AddScoped<ISkillService, SkillService>();
+        serviceCollection.AddScoped<IExperienceService, ExperienceService>();
+        serviceCollection.AddScoped<IEducationService, EducationService>();
+        serviceCollection.AddScoped<ICommentService, CommentService>();
+
+
     }
 
     public static void AddMySingleton(this IServiceCollection serviceCollection)

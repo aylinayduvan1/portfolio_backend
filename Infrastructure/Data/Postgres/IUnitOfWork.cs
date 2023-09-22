@@ -7,7 +7,7 @@ public interface IUnitOfWork : IDisposable
     IUserRepository Users { get; }
     IUserTokenRepository UserTokens { get; }
     ICommentRepository Comments { get; }
-    IAdvertRepository Adverts { get; }
+    IAdvertRepository Adverties { get; }
     IEducationRepository Educations { get; }
     IExperienceRepository Experiences { get; }
     ISkillRepository Skilles { get; }
